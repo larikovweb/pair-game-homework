@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color: $mainFontColor;
+  scroll-behavior: smooth;
+  font-size: 16px;
+
+  @media (max-width: $desktopWidth) {
+    font-size: calcFluidFontSize(10.7243, 16, 992, 1480);
+  }
+  @media (max-width: $lgTableWidth) {
+    font-size: calcFluidFontSize(10.7243, 16, 576, 992);
+  }
+  @media (max-width: $lgPhoneWidth) {
+    font-size: calcFluidFontSize(11.9468, 24.5761, 280, 576);
+  }
+}
+
+body {
+  font-family: $mainFont;
+  background-color: $bgColor;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-top: rem(96);
+
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+}
+
+.disable {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+input {
+  &[type='text'],
+  &[type='number'],
+  &[type='password'],
+  &[type='search'] {
+    width: 100%;
+    border-radius: rem(5);
+    padding: rem(12) rem(16) rem(13);
+    border: rem(1) solid #a8a8a8;
+    font-weight: 600;
+    font-size: rem(12);
+    line-height: rem(15);
+    transition: border 0.3s;
+    &::placeholder {
+      color: #a8a8a8;
+      transition: opacity 0.3s;
+    }
+    &:focus {
+      border: rem(1) solid #727272;
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+  }
+}

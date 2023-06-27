@@ -1,0 +1,351 @@
+/* Vars:
+  ========================================================================== */
+/* Mixins:
+  ========================================================================== */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.1 | 20191019
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+menu,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+body {
+  line-height: 1;
+}
+
+menu,
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  font-family: "StratosSkyeng", sans-serif;
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: "StratosSkyeng", sans-serif;
+  outline: none;
+  border: none;
+}
+button:focus {
+  outline: none;
+  border: none;
+}
+
+input {
+  font-family: "StratosSkyeng", sans-serif;
+  outline: none;
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+input::placeholder {
+  font-family: "StratosSkyeng", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+@font-face {
+  font-family: "StratosSkyeng";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/StratosSkyeng/stratosskyengweb-regular.woff") format("woff"), url("../../assets/fonts/StratosSkyeng/stratosskyengweb-regular.woff2") format("woff2");
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color: #ffffff;
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+@media (max-width: 1480px) {
+  html {
+    font-size: calc(0.0108108607 * 100vw + -0.0000737705px);
+  }
+}
+@media (max-width: 992px) {
+  html {
+    font-size: calc(0.0126819712 * 100vw + 3.4194846154px);
+  }
+}
+@media (max-width: 576px) {
+  html {
+    font-size: calc(0.0426665541 * 100vw + 0.0001648649px);
+  }
+}
+
+body {
+  font-family: "StratosSkyeng", sans-serif;
+  background-color: #004980;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-top: 6rem;
+}
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.disable {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+input[type=text], input[type=number], input[type=password], input[type=search] {
+  width: 100%;
+  border-radius: 0.3125rem;
+  padding: 0.75rem 1rem 0.8125rem;
+  border: 0.0625rem solid #a8a8a8;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  transition: border 0.3s;
+}
+input[type=text]::placeholder, input[type=number]::placeholder, input[type=password]::placeholder, input[type=search]::placeholder {
+  color: #a8a8a8;
+  transition: opacity 0.3s;
+}
+input[type=text]:focus, input[type=number]:focus, input[type=password]:focus, input[type=search]:focus {
+  border: 0.0625rem solid #727272;
+}
+input[type=text]:focus::placeholder, input[type=number]:focus::placeholder, input[type=password]:focus::placeholder, input[type=search]:focus::placeholder {
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 73, 128, 0.9);
+}
+.modal__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30rem;
+  height: 28.6875rem;
+  border-radius: 0.75rem;
+  background: #c2f5ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 3.25rem 0;
+  color: #004980;
+}
+.modal__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+.modal__title img {
+  width: 6rem;
+  height: 6rem;
+  margin-bottom: 0.3rem;
+}
+.modal__lvls {
+  display: flex;
+}
+.modal__lvls > * {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.125rem;
+  height: 6.125rem;
+  border-radius: 0.75rem;
+  background: #fff;
+  text-align: center;
+  font-size: 4rem;
+  line-height: 4.5rem;
+  transition: box-shadow 0.3s;
+}
+.modal__lvls > *:not(:last-child) {
+  margin-right: 1.63rem;
+}
+.modal__lvls > *:not(.active):hover {
+  box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.2) inset;
+}
+.modal__lvls > *.active {
+  box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.5) inset;
+}
+
+.btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15.375rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  background-color: #7ac100;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  transition: opacity 0.3s;
+}
+.btn:hover {
+  opacity: 0.8;
+}/*# sourceMappingURL=index.css.map */

@@ -3,9 +3,9 @@
 
 @function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
   $k: calc(($f-max - $f-min) / ($v-max - $v-min));
-  $b: $f-min - $k * $v-min;
+  $b: calc(($f-min - $k) * $v-min);
 
-  $b: $b * 1px;
+  $b: calc($b * 1px);
 
   @return calc(#{$k} * 100vw + #{$b});
 }
@@ -20,7 +20,7 @@
     $context: $context * 1px;
   }
 
-  @return calc($pixels / $context) * 1rem;
+  @return ($pixels / $context) * 1rem;
 }
 
 // size to one line

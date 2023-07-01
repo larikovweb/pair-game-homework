@@ -1,24 +1,3 @@
-## Файловая структура
-
-```
-webpack-frontend-template
-├── dist
-├── src
-│   ├── assets
-│       ├── fonts
-│       └── images
-│   ├── styles
-│   ├── index.html
-│   └── index.ts
-├── webpack.config.js
-├── package.json
-├── .editorconfig
-├── .eslintignore
-├── .eslintrc.json
-├── .gitignore
-└── .prettierrc
-```
-
 ## Команды
 
 - `yarn run dev` - собираем development

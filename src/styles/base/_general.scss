@@ -23,7 +23,7 @@ body {
   background-color: $bgColor;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  padding-top: rem(96);
+  padding: rem(22);
 
   &::-webkit-scrollbar {
     display: none;

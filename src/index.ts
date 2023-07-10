@@ -3,6 +3,7 @@ import './assets/fonts/stratosskyengweb-regular.woff';
 import './assets/fonts/stratosskyengweb-regular.woff2';
 import { LvlPage, GamePage } from './pages';
 import { GAME_ROUTE, MAIN_ROUTE } from './utils';
+import { Header } from './components/Header';
 
 const app = document.getElementById('app');
 

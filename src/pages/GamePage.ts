@@ -1,3 +1,4 @@
+import { Header } from '../components/Header';
 import { InitGlobalState } from '../state';
 
 export const GamePage = () => {
@@ -6,6 +7,7 @@ export const GamePage = () => {
   console.log(activeLvl);
 
   node.className = 'class';
-  node.innerHTML = `Страница игры уровня сложности ${InitGlobalState.getLvl()}`;
+  node.appendChild(Header());
+
   return node;
 };

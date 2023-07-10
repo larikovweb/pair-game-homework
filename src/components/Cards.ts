@@ -132,39 +132,39 @@ export const cardsData = [
     value: 'A',
   },
   {
-    suit: 'hearts',
+    suit: 'heart',
     value: '6',
   },
   {
-    suit: 'hearts',
+    suit: 'heart',
     value: '7',
   },
   {
-    suit: 'hearts',
+    suit: 'heart',
     value: '8',
   },
   {
-    suit: 'hearts',
+    suit: 'heart',
     value: '9',
   },
   {
-    suit: 'hearts',
+    suit: 'heart',
     value: '10',
   },
   {
-    suit: 'hearts',
+    suit: 'heart',
     value: 'J',
   },
   {
-    suit: 'hearts',
+    suit: 'heart',
     value: 'Q',
   },
   {
-    suit: 'hearts',
+    suit: 'heart',
     value: 'K',
   },
   {
-    suit: 'hearts',
+    suit: 'heart',
     value: 'A',
   },
 ];

@@ -24,6 +24,7 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
   padding: rem(22);
+  min-height: 100vh;
 
   &::-webkit-scrollbar {
     display: none;

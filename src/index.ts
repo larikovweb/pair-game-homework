@@ -7,7 +7,10 @@ import { Header } from './components/Header';
 
 const app = document.getElementById('app');
 
-const routes: { path: string; component: () => HTMLElement }[] = [
+const routes: {
+  path: string;
+  component: () => HTMLElement | DocumentFragment;
+}[] = [
   {
     path: MAIN_ROUTE,
     component: LvlPage,

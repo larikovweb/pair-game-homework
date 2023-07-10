@@ -1,10 +1,10 @@
 import { InitGlobalState } from '../state';
 
 export const Header = () => {
-  const node = document.createElement('div');
+  const node = document.createElement('header');
+  node.className = 'header';
 
   node.innerHTML = `
-    <header class="header">
       <div class="header__timer">
         <div class="header__block">
           <span>min</span>
@@ -17,7 +17,6 @@ export const Header = () => {
         </div>
       </div>
       <button class="header__btn btn">Начать заново</button>
-    </header>
   `;
   InitGlobalState.initTimer();
   node.querySelector('.header__btn')?.addEventListener('click', () => {

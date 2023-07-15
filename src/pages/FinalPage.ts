@@ -1,6 +1,6 @@
 import { openPage } from '../index';
 import { Modal } from '../components/Modal';
-import { GAME_ROUTE } from '../utils';
+import { MAIN_ROUTE } from '../utils';
 import { InitGlobalState } from '../state';
 import { getTime } from '../fn/fn';
 
@@ -27,7 +27,7 @@ export const FinalPage = () => {
 
   const onClick = () => {
     InitGlobalState.resetGame();
-    openPage(GAME_ROUTE);
+    openPage(MAIN_ROUTE);
   };
 
   return Modal('Вы выиграли!', node, {

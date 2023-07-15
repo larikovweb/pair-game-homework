@@ -1,5 +1,5 @@
 import { shuffle } from '../fn/fn';
-import { InitGlobalState } from '../state';
+import { ICard, InitGlobalState } from '../state';
 import { Card } from './Card';
 
 export const Cards = () => {
@@ -8,14 +8,15 @@ export const Cards = () => {
   const activeLvl = InitGlobalState.getLvl();
   const cardsCount = activeLvl * 6;
   node.style.gridTemplateColumns = `repeat(${cardsCount / 3}, 1fr)`;
-  const shuffleCards: { suit: string; value: string }[] = [];
+  const shuffleCards: ICard[] = [];
   shuffle(cardsData)
     .filter((_, i) => i < cardsCount / 2)
     .forEach((card) => {
       shuffleCards.push(card);
       shuffleCards.push(card);
     });
-  shuffle(shuffleCards).forEach((card) => {
+  const cardsForRender = shuffle(shuffleCards);
+  cardsForRender.forEach((card) => {
     node.appendChild(Card(card.suit, card.value));
   });
 

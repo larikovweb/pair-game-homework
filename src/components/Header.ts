@@ -1,4 +1,6 @@
+import { GAME_ROUTE, TIMER_FOR_START_GAME } from '../utils';
 import { InitGlobalState } from '../state';
+import { openPage } from '../index';
 
 export const Header = () => {
   const node = document.createElement('header');
@@ -18,9 +20,16 @@ export const Header = () => {
       </div>
       <button class="header__btn btn">Начать заново</button>
   `;
-  InitGlobalState.initTimer();
+
+  InitGlobalState.endTimer();
+
+  setTimeout(() => {
+    InitGlobalState.initTimer();
+  }, TIMER_FOR_START_GAME);
+
   node.querySelector('.header__btn')?.addEventListener('click', () => {
     clearInterval(InitGlobalState.initTimer());
+    openPage(GAME_ROUTE);
   });
   return node;
 };

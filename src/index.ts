@@ -1,9 +1,8 @@
 import './styles/index.scss';
 import './assets/fonts/stratosskyengweb-regular.woff';
 import './assets/fonts/stratosskyengweb-regular.woff2';
-import { LvlPage, GamePage } from './pages';
-import { GAME_ROUTE, MAIN_ROUTE } from './utils';
-import { Header } from './components/Header';
+import { LvlPage, GamePage, FinalPage } from './pages';
+import { FINAL_ROUTE, GAME_ROUTE, MAIN_ROUTE } from './utils';
 
 const app = document.getElementById('app');
 
@@ -18,6 +17,10 @@ const routes: {
   {
     path: GAME_ROUTE,
     component: GamePage,
+  },
+  {
+    path: FINAL_ROUTE,
+    component: FinalPage,
   },
 ];
 

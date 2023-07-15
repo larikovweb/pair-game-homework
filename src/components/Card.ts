@@ -1,3 +1,7 @@
+import { InitGlobalState } from '../state';
+import { TIMER_FOR_START_GAME } from '../utils';
+import { CardShirt } from './CardShirt';
+
 export const Card = (suit: string, value: string) => {
   const node = document.createElement('div');
   node.className = 'card';
@@ -25,7 +29,11 @@ export const Card = (suit: string, value: string) => {
 
   node.style.color = getColor(suit);
 
+  node.dataset.suit = suit;
+  node.dataset.value = value;
+
   node.innerHTML = `
+    <div class="card__shirt">${CardShirt().innerHTML}</div>
     <div class="card__head">
       <b>${value}</b>
       <i>${getSuit(suit)}</i>
@@ -38,6 +46,15 @@ export const Card = (suit: string, value: string) => {
       <i>${getSuit(suit)}</i>
     </div>
   `;
+
+  setTimeout(() => {
+    node.classList.add('active');
+  }, TIMER_FOR_START_GAME);
+
+  node.addEventListener('click', () => {
+    node.classList.remove('active');
+    InitGlobalState.selectCard(node);
+  });
 
   return node;
 };

@@ -1,7 +1,13 @@
 export const getTime = (
-  date1: Date,
-  date2: Date
+  date1: Date | null,
+  date2: Date | null
 ): { min: string; sec: string } => {
+  if (date1 === null || date2 === null) {
+    return {
+      min: '00',
+      sec: '00',
+    };
+  }
   const diffInMinutes = Math.floor(
     (date2.getTime() - date1.getTime()) / 60000
   ).toString();

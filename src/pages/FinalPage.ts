@@ -7,8 +7,6 @@ import { getTime } from '../fn/fn';
 export const FinalPage = () => {
   const node = document.createElement('div');
   node.className = 'modal__final';
-  console.log(InitGlobalState.startTime, 'InitGlobalState.startTime');
-  console.log(InitGlobalState.endTime, 'InitGlobalState.endTime');
   const time = getTime(InitGlobalState.startTime, new Date());
   node.innerHTML = `
     <span>Затраченное время:</span>

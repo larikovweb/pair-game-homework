@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "homepage": ".",
   "scripts": {
-    "precommit": "tsc",
+    "precommit": "tsc && npm run test",
     "dev": "cross-env NODE_ENV=development webpack --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "watch": "cross-env NODE_ENV=development webpack --mode development --watch",

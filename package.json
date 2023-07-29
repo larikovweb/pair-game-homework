@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "homepage": ".",
   "scripts": {
+    "precommit": "tsc",
     "dev": "cross-env NODE_ENV=development webpack --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
@@ -60,8 +61,14 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-typescript": "^7.22.5",
+    "husky": "^8.0.3",
     "lodash": "^4.17.21",
     "normalize.css": "^8.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
   },
   "browserslist": {
     "production": [
